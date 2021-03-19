@@ -1,0 +1,62 @@
+<view class="znbx_index">
+  <!-- 搜索框开始 -->
+  <SearchInput></SearchInput>
+  <!-- 搜索框结束 -->
+  <!-- 轮播图开始 -->
+  <view class="index_swiper">
+    <swiper autoplay indicator-dots circular interval="3000">
+      <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+        <navigator>
+          <image mode="widthFix" src="{{item.image_src}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图结束 -->
+  <view class="znsn">
+    <block>智能收纳</block>
+    |
+    <text class="cy">创意生活</text>
+  </view>
+  <!-- 导航开始 -->
+  <!-- <view class="index_cate">
+    <navigator wx:for="{{catesList}}" wx:key="name">
+      <image mode="widthFix" src="{{item.image_src}}"></image>
+    </navigator>
+  </view> -->
+  <view class="nav">
+    <navigator url="/pages/itemstorage/index" open-type="navigate" class="nav-item">
+      <image src="../../icons/wupin.png" class="nav-image"></image>
+      <text>物品收纳</text>
+    </navigator>
+    <navigator url="/pages/foodpreservation/index" open-type="navigate" class="nav-item">
+      <image src="../../icons/food.png" class="nav-image"></image>
+      <text>食品保鲜</text>
+    </navigator>
+    <navigator url="/pages/myreminder/index" open-type="navigate" class="nav-item">
+      <image src="../../icons/tixing.png" class="nav-image"></image>
+      <text>温度与湿度</text>
+    </navigator>
+    <navigator url="/pages/locationmanagement/index" open-type="navigate" class="nav-item">
+      <image src="../../icons/position.png" class="nav-image"></image>
+      <text>位置管理</text>
+    </navigator>
+    <navigator url="/pages/labelmanagement/index" open-type="navigate" class="nav-item">
+      <image src="../../icons/title.png" class="nav-image"></image>
+      <text>标签管理</text>
+    </navigator>
+    <navigator url="/pages/itemgallery/index" open-type="navigate" class="nav-item">
+      <image src="../../icons/photo.png" class="nav-image"></image>
+      <text>物品图库</text>
+    </navigator>
+    <navigator url="/pages/itemstorage/index" open-type="navigate" class="nav-item">
+      <image src="../../icons/tips.png" class="nav-image"></image>
+      <text>操作说明</text>
+    </navigator>
+    <navigator url="/pages/itemstorage/index" open-type="navigate" class="nav-item">
+      <image src="../../icons/shop.png" class="nav-image"></image>
+      <text>微信商城</text>
+    </navigator>
+  </view>
+  <!-- 导航结束 -->
+</view>

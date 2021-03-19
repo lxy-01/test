@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/install/index",
+    "pages/search/index",
+    "pages/itemstorage/index",
+    "pages/foodpreservation/index",
+    "pages/myreminder/index",
+    "pages/locationmanagement/index",
+    "pages/labelmanagement/index",
+    "pages/itemgallery/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智能冰箱",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#87CEFA",
+    "backgroundColor": "#fefefe",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/shouye1.png",
+        "selectedIconPath": "icons/shouye.png"
+      },
+      {
+        "pagePath": "pages/install/index",
+        "text": "设置",
+        "iconPath": "icons/setup1.png",
+        "selectedIconPath": "icons/setup.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

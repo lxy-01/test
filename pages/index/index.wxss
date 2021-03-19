@@ -1,0 +1,44 @@
+
+/* 轮播图 */
+.index_swiper swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+.index_swiper swiper image {
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+/* 文字 */
+.znsn{
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+}
+.cy{
+  color: #999;
+  font-size: 14px;
+}
+/* 导航栏图片 */
+.nav{
+  padding-top: 35rpx;
+  display: flex;
+  flex-direction: row; /*水平排列*/
+  flex-wrap: wrap; /*元素换行*/
+  justify-content: space-between; /*元素在主轴（页面）上左右两端或者上下两端开始排列*/
+}
+.nav-item{
+  width: 25%;
+  display: flex;  /*弹性布局 */
+  align-items: center;
+  flex-direction: column; /*垂直排列*/
+  margin-top: 40rpx;
+}
+.nav-item .nav-image {
+  width: 55rpx;
+  height: 55rpx;
+}
+.nav-item text {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: gray;
+}
