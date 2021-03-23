@@ -5,22 +5,22 @@ import * as echarts from '../../ec-canvas/echarts';
 Page({
   data: {
     // 默认数据
-    date01: '2021-3-17',
-    date02: '2021-3-24',
+    date01: '2021-03-01',
+    date02: '2021-03-03',
     //折现属性
     series: [{
-      data: ([34, 66, 45, 59, 37, 85, 60]).reverse(),     //要改
+      data: ([]).reverse(),    
       name: '温度',
       smooth: false,
       type: 'line'
     }, {
-      data: ([15, 12, 7, 23, 3, 14, 22]).reverse(),       //要改
+      data: ([]).reverse(),       
       name: '湿度',
       smooth: false,
       type: 'line'
     }],
     // 默认7天
-    ascissaData: (['6-1', '6-2', '6-3', '6-4', '6-5', '6-6', '6-7']).reverse(),     //要改
+    ascissaData: ([]).reverse(),     
     ec: {
       lazyLoad: true
     }
@@ -28,7 +28,8 @@ Page({
 
   onLoad: function () {
     this.echartsComponnet = this.selectComponent('#mychart');
-    this.init_echarts()
+    this.init_echarts();
+    this.getChartData();
   },
 
   // 日期选择器
@@ -138,41 +139,25 @@ Page({
     var that = this
     console.log(that.data.date01, that.data.date02)
     wx.request({
-      url: 'http://weixin.frp.kaigejava.com/salary/getSalaryByDate',
+      url: 'http://192.168.3.197:9000/datas/list_tem_hum',
       data: {
-        start: that.data.date01,
-        end: that.data.date02,
+        begin_data:"2021-03-01",
+        end_data:"2021-03-03"
       },
+      method:"post",
       header: {
-        'content-type': 'application/x-www-form-urlencoded',
+        'content-type': 'application/json',
         // 'Authorization': 'Bearer ' + wx.getStorageSync('token')
       },
       success: function (res) {
         console.log(res);
         var data = res.data.data
         that.setData({
-          series: data.series,
-          ascissaData: data.ascissaData //默认横坐标
+          'series[0].data': res.data.list_hum,
+          'series[1].data': res.data.list_temp,
+          ascissaData: res.data.list_data //默认横坐标
         })
         that.init_echarts()
-      }
-    })
-  },
-
-  getTest:function(){
-    wx.request({
-      url: 'http://192.168.3.200:9996/api/test',
-      data: {
-        "开始日期":"2021-3-19",
-        "结束日期":"2021-3-25"
-      },
-      method:"post",
-      header: {
-        'content-type': 'application/x-www-form-urlencoded',
-        // 'Authorization': 'Bearer ' + wx.getStorageSync('token')
-      },
-      success: function (res) {
-        console.log(res);
       }
     })
   }
