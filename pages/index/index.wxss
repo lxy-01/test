@@ -1,4 +1,10 @@
-
+.sousuo{
+  display: flex;
+}
+.button{
+  width: 55rpx;
+  height: 55rpx;
+}
 /* 轮播图 */
 .index_swiper swiper {
   width: 750rpx;

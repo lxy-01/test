@@ -6,15 +6,15 @@ Page({
   data: {
     // 默认数据
     date01: '2021-03-01',
-    date02: '2021-03-03',
+    date02: '2021-03-02',
     //折现属性
     series: [{
-      data: ([]).reverse(),    
+      data: ([]),    
       name: '温度',
       smooth: false,
       type: 'line'
     }, {
-      data: ([]).reverse(),       
+      data: ([]),       
       name: '湿度',
       smooth: false,
       type: 'line'
@@ -63,8 +63,8 @@ Page({
   // 获取数据
   getOption: function () {
     var that = this
-    console.log(that.data.series)
-    console.log(that.data.ascissaData)
+    console.log(that.data.series)  //打印的是温湿度
+    // console.log(that.data.ascissaData)    //打印的是时间
     var legendList = []
     for (var i in that.data.series) {
       var obj = {
@@ -94,7 +94,7 @@ Page({
       },
       // 刻度
       grid: {
-        containLabel: true
+        containLabel: false
       },
       // 悬浮图标
       tooltip: {
@@ -111,7 +111,7 @@ Page({
       xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: that.data.ascissaData.reverse(),
+        data: that.data.ascissaData,
         // show: false
       },
       yAxis: {
@@ -126,7 +126,7 @@ Page({
           show: false
         },
         axisTick: { //y轴刻度小标是否显示
-          show: false
+          show: true
         }
       },
       series: that.data.series
@@ -137,11 +137,11 @@ Page({
   // 获取折线图数据
   getChartData: function () {
     var that = this
-    console.log(that.data.date01, that.data.date02)
+    console.log(that.data.date01, that.data.date02)  //输出当前的日期
     wx.request({
       url: 'http://192.168.3.197:9000/datas/list_tem_hum',
       data: {
-        begin_data:"2021-03-01",
+        begin_data:"2021-03-02",
         end_data:"2021-03-03"
       },
       method:"post",
