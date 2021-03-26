@@ -139,7 +139,7 @@ Page({
     var that = this
     console.log(that.data.date01, that.data.date02)  //输出当前的日期
     wx.request({
-      url: 'http://192.168.3.197:9000/datas/list_tem_hum',
+      url: 'http://192.168.31.45:9000/datas/list_tem_hum',
       data: {
         begin_data:"2021-03-02",
         end_data:"2021-03-03"

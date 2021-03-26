@@ -30,9 +30,9 @@
     </navigator>
   </view> -->
   <view class="nav">
-    <navigator url="/pages/itemstorage/index" open-type="navigate" class="nav-item">
+    <navigator url="/pages/nutritivevalue/index" open-type="navigate" class="nav-item">
       <image src="../../icons/wupin.png" class="nav-image"></image>
-      <text>物品收纳</text>
+      <text>营养价值</text>
     </navigator>
     <navigator url="/pages/foodpreservation/index" open-type="navigate" class="nav-item">
       <image src="../../icons/food.png" class="nav-image"></image>

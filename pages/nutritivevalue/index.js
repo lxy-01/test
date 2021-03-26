@@ -1,4 +1,4 @@
-// pages/Itemstorage/index.js
+// pages/nutritivevalue/index.js
 Page({
 
   /**

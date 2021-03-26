@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/install/index",
     "pages/search/index",
-    "pages/itemstorage/index",
+    "pages/nutritivevalue/index",
     "pages/foodpreservation/index",
     "pages/myreminder/index",
     "pages/locationmanagement/index",
