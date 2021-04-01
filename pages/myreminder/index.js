@@ -6,21 +6,21 @@ Page({
   data: {
     // 默认数据
     date01: '2021-03-01',
-    date02: '2021-03-02',
+    date02: '2021-03-02XW',
     //折现属性
     series: [{
-      data: ([]),    
+      data: ([]),
       name: '温度',
       smooth: false,
       type: 'line'
     }, {
-      data: ([]),       
+      data: ([]),
       name: '湿度',
       smooth: false,
       type: 'line'
     }],
     // 默认7天
-    ascissaData: ([]).reverse(),     
+    ascissaData: ([]).reverse(),
     ec: {
       lazyLoad: true
     }
@@ -66,6 +66,7 @@ Page({
     console.log(that.data.series)  //打印的是温湿度
     // console.log(that.data.ascissaData)    //打印的是时间
     var legendList = []
+    //可注释
     for (var i in that.data.series) {
       var obj = {
         name: that.data.series[i].name,
@@ -141,10 +142,10 @@ Page({
     wx.request({
       url: 'http://192.168.31.45:9000/datas/list_tem_hum',
       data: {
-        begin_data:"2021-03-02",
-        end_data:"2021-03-03"
+        begin_data: "2021-03-02",
+        end_data: "2021-03-03"
       },
-      method:"post",
+      method: "post",
       header: {
         'content-type': 'application/json',
         // 'Authorization': 'Bearer ' + wx.getStorageSync('token')

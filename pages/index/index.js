@@ -6,8 +6,6 @@ Page({
     // 轮播图数组
     swiperList: [],
 
-    //导航 数组
-    // catesList: []
   },
   //options(Object)
   onLoad: function (options) {
@@ -22,7 +20,6 @@ Page({
     // })
 
     this.getSwiperList();
-    // this.getcatesList();
   },
 
   //获取轮播图数据
@@ -33,15 +30,5 @@ Page({
           swiperList: result.data.message
         })
       })
-  },
-  //获取 分类导航数据
-  // getcatesList() {
-  //   request({ url: "https://api-hmugo-web.itheima.net/api/public/v1/home/catitems" })
-  //     .then(result => {
-  //       this.setData({
-  //         catesList: result.data.message
-  //       })
-  //     })
-  // },
-
+  }
 });

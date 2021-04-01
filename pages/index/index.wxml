@@ -5,15 +5,19 @@
   <button class="button" size="mini">
     <image src="/icons/search.png" mode="widthFix" class="button"></image>
   </button>
-</view>
+  </view>
   <!-- 搜索框结束 -->
   <!-- 轮播图开始 -->
   <view class="index_swiper">
     <swiper autoplay indicator-dots circular interval="3000">
-      <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+      <!-- <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
         <navigator>
           <image mode="widthFix" src="{{item.image_src}}"></image>
         </navigator>
+      </swiper-item> -->
+      <swiper-item>
+        <image mode="widthFix" src="/images/znbx.jpg">
+        </image>
       </swiper-item>
     </swiper>
   </view>
