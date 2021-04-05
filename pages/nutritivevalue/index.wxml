@@ -39,6 +39,7 @@
             <view class="container">
                 <ec-canvas id="mychart" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
             </view>
+            <view>卡路里比例：</view>
         </swiper-item>
     </block>
 </swiper>
