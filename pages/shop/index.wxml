@@ -1,0 +1,11 @@
+<form bindsubmit="formSubmit" bindreset="formReset" class="all">
+  <view style='position: fixed; width: 100%;'>
+    <view class='tu1'>
+      <block wx:for="{{img_arr}}" wx:key="index">
+        <view class='logoinfo'>
+          <image class='logoinfo' mode="aspectFill" src='{{item}}' data-index="{{index}}" bindtap="previewImg" bindlongpress="deleteImg" name="headimage"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+</form>

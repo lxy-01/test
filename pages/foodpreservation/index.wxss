@@ -28,3 +28,6 @@
 .bg-g {
     background: #e6f3f9;
 }
+.co{
+    color: red;
+}

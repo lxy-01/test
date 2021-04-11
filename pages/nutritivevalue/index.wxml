@@ -12,14 +12,43 @@
     <view wx:elif="{{navState==1}}" class="style-default">2</view>
 </view> -->
 <!-- 滑动页 -->
-<swiper bindchange="bindchange" current="{{navState}}">
-    <block>
-        <swiper-item>
+<swiper bindchange="bindchange" current="{{navState}}" style="min-height:100vh">
+    <!-- <block> -->
+    <swiper-item>
+        <view class="table">
+            <view class="tr bg-w">
+                <view class="th">名称</view>
+                <view class="th">重量</view>
+                <view class="th">存放天数</view>
+            </view>
+            <block wx:for="{{list}}" wx:key="list">
+                <view class="tr bg-g" wx:if="{{index % 2==0}}">
+                    <view class="td">{{item.name}}</view>
+                    <view class="td">{{item.weight}}</view>
+                    <view class="td">{{item.reservedate}}</view>
+                </view>
+                <view class="tr" wx:else>
+                    <view class="td">{{item.name}}</view>
+                    <view class="td">{{item.weight}}</view>
+                    <view class="td">{{item.reservedate}}</view>
+                </view>
+            </block>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="distribution doneLog">
+            <view class="kb"></view>
+            <view class="container">
+                <ec-canvas id="mychart" canvas-id="mychart-bar" ec="{{ ec }}" force-use-old-canvas="true"></ec-canvas>
+            </view>
+            <view class="title">
+                <view class="title-left">卡路里比例:</view>
+            </view>
             <view class="table">
                 <view class="tr bg-w">
-                    <view class="th">名称</view>
-                    <view class="th">重量</view>
-                    <view class="th">存放天数</view>
+                    <view class="th">卡路里来源</view>
+                    <view class="th">占比</view>
+                    <view class="th">健康占比</view>
                 </view>
                 <block wx:for="{{list}}" wx:key="list">
                     <view class="tr bg-g" wx:if="{{index % 2==0}}">
@@ -34,12 +63,6 @@
                     </view>
                 </block>
             </view>
-        </swiper-item>
-        <swiper-item>
-            <view class="container">
-                <ec-canvas id="mychart" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
-            </view>
-            <view>卡路里比例：</view>
-        </swiper-item>
-    </block>
+        </view>
+    </swiper-item>
 </swiper>

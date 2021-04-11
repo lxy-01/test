@@ -1,1 +1,50 @@
-/* pages/itemgallery/index.wxss */
+.all{
+    background-color: rgb(237,237,237);
+    /* position: fixed; 
+    width: 100%; */
+  }
+.tu {  
+    border-radius: 10rpx;  
+    height: 260rpx;  width: 260rpx;  
+    margin: 5rpx 5rpx 5rpx 5rpx;   
+}
+.logoinfo { 
+    height: 220rpx; 
+    width: 220rpx; 
+    margin: 10rpx 10rpx 10rpx 10rpx;
+}
+.tu1 {  
+display: flex;  
+flex-flow: row wrap;  
+align-content: space-around;
+}
+.an {  
+height: 90rpx;  
+width: 270rpx;  
+font-size: 38rpx;  
+background-color: rgba(146, 163, 45, 0.288);  
+font-weight: 600;  
+color: white;
+}
+button::after {  
+border: none;
+}
+.an1 {  
+margin-top: 90rpx;
+}
+.bd{
+    height: 300rpx;
+    background-color: #fff;
+    /* padding: 40rpx 40rpx; */
+}
+.same{
+    padding: 40rpx 40rpx;
+    border-bottom: 1px solid rgb(237,237,237);
+}
+
+.section__title{
+    font-size: 16px;
+    font-weight: bolder;
+    padding-bottom: 30rpx;
+}
+

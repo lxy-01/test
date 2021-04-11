@@ -1,0 +1,18 @@
+
+.tu {  
+  border-radius: 10rpx;  
+  height: 260rpx;  width: 260rpx;  
+  margin: 5rpx 5rpx 5rpx 5rpx;   
+  width: 100%;
+}
+.logoinfo { 
+  height: 220rpx; 
+  width: 220rpx; 
+  margin: 10rpx 10rpx 10rpx 10rpx;
+}
+.tu1 {  
+display: flex;  
+flex-flow: row wrap;  
+align-content: space-around;
+}
+

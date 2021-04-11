@@ -1,2 +1,32 @@
-<!--pages/itemgallery/index.wxml-->
-<text>pages/itemgallery/index.wxml</text>
+<view class="all">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class='tu1'>
+            <block wx:for="{{img_arr}}" wx:key="index">
+                <view class='logoinfo'>
+                    <image class='logoinfo' mode="aspectFill" src='{{item}}' data-index="{{index}}" bindtap="previewImg" bindlongpress="deleteImg" name="headimage"></image>
+                </view>
+            </block>
+            <image bindtap='upimg' class='tu' src="../../images/jiahao.png"></image>
+            <!-- <image bindtap='upimg' class='tu' src="http://192.168.31.45:9000/api/static/2.jpg"></image> -->
+        </view>
+        <!-- </form> -->
+        <!-- <form bindsubmit="messageSubmit" bindreset="formReset"> -->
+        <view class="bd">
+            <view class="section same">
+                <input name="cname" placeholder="菜名" />
+            </view>
+            <view class="section same">
+                <view class="section__title">关联收纳食品</view>
+                <input name="add" placeholder="添加相关食品" placeholder-style="color:rgb(247,99,85)" />
+            </view>
+            <view class="section same">
+                <view class="section__title">用料</view>
+                <input name="chengfen" placeholder="食材:如鸡蛋       用量:如1只" />
+            </view>
+            <view class='an1'>
+                <button form-type="submit" class='an'>提交</button>
+            </view>
+        </view>
+    </form>
+    <!-- <image bindtap='gotoPage' class='tu' src="../../images/jiahao.png"></image> -->
+</view>

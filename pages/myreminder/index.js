@@ -1,12 +1,14 @@
 //获取应用实例
 const app = getApp()
 import * as echarts from '../../ec-canvas/echarts';
+var util = require('../../utils/util.js');
 
 Page({
   data: {
     // 默认数据
     date01: '2021-03-01',
-    date02: '2021-03-02XW',
+    date02: '2021-03-02',
+    date03: '2021-03-03',
     //折现属性
     series: [{
       data: ([]),
@@ -30,6 +32,7 @@ Page({
     this.echartsComponnet = this.selectComponent('#mychart');
     this.init_echarts();
     this.getChartData();
+    this.getData();
   },
 
   // 日期选择器
@@ -45,7 +48,6 @@ Page({
       date02: e.detail.value
     })
   },
-
   //初始化图表
   init_echarts: function () {
     this.echartsComponnet.init((canvas, width, height) => {
@@ -64,9 +66,9 @@ Page({
   getOption: function () {
     var that = this
     console.log(that.data.series)  //打印的是温湿度
-    // console.log(that.data.ascissaData)    //打印的是时间
+    //console.log(that.data.ascissaData)    //打印的是时间
     var legendList = []
-    //可注释
+    //可注释 图例
     for (var i in that.data.series) {
       var obj = {
         name: that.data.series[i].name,
@@ -81,7 +83,7 @@ Page({
     }
     var option = {
       // 折线图线条的颜色
-      color: ["#37A2DA", "#67E0E3", "#9FE6B8"],
+      color: ["#37A2DA", "#67E0E3"],    //"#9FE6B8"
       // 折线图的线条代表意义
       legend: {
         itemWidth: 5, //小圆点的宽度
@@ -138,12 +140,12 @@ Page({
   // 获取折线图数据
   getChartData: function () {
     var that = this
-    console.log(that.data.date01, that.data.date02)  //输出当前的日期
+    console.log(that.data.date01, that.data.date02) //输出当前的日期
     wx.request({
       url: 'http://192.168.31.45:9000/datas/list_tem_hum',
       data: {
-        begin_data: "2021-03-02",
-        end_data: "2021-03-03"
+        begin_data: that.data.date01,
+        end_data: that.data.date02,
       },
       method: "post",
       header: {
@@ -156,9 +158,32 @@ Page({
         that.setData({
           'series[0].data': res.data.list_hum,
           'series[1].data': res.data.list_temp,
-          ascissaData: res.data.list_data //默认横坐标
+          ascissaData: res.data.list_data, //默认横坐标
         })
         that.init_echarts()
+      }
+    })
+  },
+  //获取单天记录
+  getData: function () {
+    var that = this
+    console.log(that.data.date03)  //输出当前的日期
+    var time = util.formatTime(new Date());
+    // that.setData({
+    //   date03: time
+    // })
+    wx.request({
+      url: 'http://192.168.31.45:9000/datas/now',
+      method: "get",
+      header: {
+        'content-type': 'application/json',
+      },
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          hum: res.data.Hum,
+          temp: res.data.Temp
+        })
       }
     })
   }

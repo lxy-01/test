@@ -9,6 +9,8 @@
     "pages/locationmanagement/index",
     "pages/labelmanagement/index",
     "pages/itemgallery/index",
+    "pages/caozuo/index",
+    "pages/shop/index",
     "pages/logs/logs"
   ],
   "window": {

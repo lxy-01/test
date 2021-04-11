@@ -2,5 +2,5 @@
   "usingComponents": {
     "ec-canvas": "../../ec-canvas/ec-canvas"
   },
-  "navigationBarTitleText": "营养价值分析"
+  "navigationBarTitleText": "食谱推荐"
 }
