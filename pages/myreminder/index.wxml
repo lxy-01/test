@@ -6,8 +6,8 @@
     <view class="title-left">当前时间温湿度</view>
   </view>
   <view class="wsd">
-    <view>温度为:{{hum}}</view>
-    <view>湿度为:{{temp}}</view>
+    <view>湿度为:{{hum}}</view>
+    <view>温度为:{{temp}}</view>
   </view>
   <view class="title">
     <view class="title-left">查询记录</view>

@@ -1,8 +1,3 @@
-<!-- <button type="primary" bindtap='getFood'>发送http请求</button> -->
-<!-- 通过wx:for循环遍历list数组 -->
-<!-- <block wx:for="{{list}}" wx:key="list">
-    <text>名称:{{item.name}}   重量:{{item.weight}}  天数:{{item.reservedate}} \n</text>
-</block> -->
 <view class="table">
     <view class="tr bg-w">
         <view class="th">名称</view>
@@ -13,13 +8,13 @@
         <view class="tr bg-g" wx:if="{{index % 2 ==0}}">
             <view class="td">{{item.name}}</view>
             <view class="td">{{item.weight}}</view>
-            <view class="td co" wx:if="{{item.reservedate>200}}">{{item.reservedate}}</view>
+            <view class="td co" wx:if="{{item.reservedate>15}}">{{item.reservedate}}</view>
             <view class="td" wx:else>{{item.reservedate}}</view>
         </view>
         <view class="tr" wx:else>
             <view class="td">{{item.name}}</view>
             <view class="td">{{item.weight}}</view>
-            <view class="td co" wx:if="{{item.reservedate>200}}">{{item.reservedate}}</view>
+            <view class="td co" wx:if="{{item.reservedate>15}}">{{item.reservedate}}</view>
             <view class="td" wx:else>{{item.reservedate}}</view>
         </view>
     </block>

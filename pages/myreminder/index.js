@@ -6,8 +6,8 @@ var util = require('../../utils/util.js');
 Page({
   data: {
     // 默认数据
-    date01: '2021-03-01',
-    date02: '2021-03-02',
+    date01: '2021-04-17',
+    date02: '2021-04-19',
     date03: '2021-03-03',
     //折现属性
     series: [{
@@ -67,6 +67,8 @@ Page({
     var that = this
     console.log(that.data.series)  //打印的是温湿度
     //console.log(that.data.ascissaData)    //打印的是时间
+    // console.log(111);
+    // console.log(that.data.series);
     var legendList = []
     //可注释 图例
     for (var i in that.data.series) {
@@ -184,6 +186,20 @@ Page({
           hum: res.data.Hum,
           temp: res.data.Temp
         })
+        console.log(res.data.Hum);
+        console.log(res.data.Temp);
+        if (res.data.Hum > 60 || res.data.Temp > 8)
+          wx.showModal({
+            title: '提示',
+            content: '冰箱温度异常',
+            success: function (res) {
+              if (res.confirm) {
+                console.log('用户点击确定')
+              } else {
+                console.log('用户点击取消')
+              }
+            }
+          })
       }
     })
   }

@@ -23,7 +23,7 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": false,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -41,7 +41,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.16.0",
-  "appid": "wx40cd7cbc74cf1b25",
+  "appid": "wx05aaa18a8bb71603",
   "projectname": "Smart%20refrigerator",
   "debugOptions": {
     "hidedInDevtools": []

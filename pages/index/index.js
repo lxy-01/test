@@ -5,7 +5,7 @@ Page({
   data: {
     // 轮播图数组
     swiperList: [],
-
+    result:''
   },
   //options(Object)
   onLoad: function (options) {
@@ -30,5 +30,18 @@ Page({
           swiperList: result.data.message
         })
       })
+  },
+  // 获取扫一扫
+  getScancode:function(){
+    var that=this
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        var result = res.result;
+        that.setData({
+          result: result,
+        })
+      }
+    })
   }
 });

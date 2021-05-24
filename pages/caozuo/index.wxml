@@ -1,2 +1,64 @@
-<!--pages/caozuo/index.wxml-->
-<text>pages/caozuo/index.wxml</text>
+<view class="same">
+  <view>
+    <view class="btitle">新鲜水产品</view>
+    <view class="stitle">鱼、虾、贝等</view>
+  </view>
+  <view class="content">
+    <view class="td">
+      <view class="cont">常温普通贮藏</view>
+      <view class="day">………………………………  44（天）</view>
+    </view>
+    <view class="td">
+      <view class="cont td1">常温真空贮藏</view>
+      <view class="day td1">………………………………  55（天）</view>
+    </view>
+    <view class="td">
+      <view class="cont">普通冷藏</view>
+      <view class="day">………………………………  33（天）</view>
+    </view>
+    <view class="td">
+      <view class="cont td1">真空冷藏</view>
+      <view class="day td1">………………………………  22（天）</view>
+    </view>
+    <view class="td">
+      <view class="cont">普通冷冻</view>
+      <view class="day">………………………………  11（天）</view>
+    </view>
+    <view class="td">
+      <view class="cont  td1">真空冷冻</view>
+      <view class="day  td1">………………………………  88（天）</view>
+    </view>
+  </view>
+</view>
+<view class="same">
+  <view class="topb">
+    <view class="btitle">新鲜肉类</view>
+    <view class="stitle">猪肉、牛肉、羊肉等</view>
+  </view>
+  <view class="content">
+    <view class="td">
+      <view class="cont">常温普通贮藏</view>
+      <view class="day">………………………………  5（天）</view>
+    </view>
+    <view class="td">
+      <view class="cont td1">常温真空贮藏</view>
+      <view class="day td1">………………………………  7（天）</view>
+    </view>
+    <view class="td">
+      <view class="cont">普通冷藏</view>
+      <view class="day">………………………………  8（天）</view>
+    </view>
+    <view class="td">
+      <view class="cont td1">真空冷藏</view>
+      <view class="day td1">………………………………  9-30（天）</view>
+    </view>
+    <view class="td">
+      <view class="cont">普通冷冻</view>
+      <view class="day">………………………………  50（天）</view>
+    </view>
+    <view class="td">
+      <view class="cont td1">真空冷冻</view>
+      <view class="day td1">………………………………  30（天）</view>
+    </view>
+  </view>
+</view>

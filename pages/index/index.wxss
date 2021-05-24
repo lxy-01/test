@@ -48,3 +48,13 @@
   font-size: 28rpx;
   color: gray;
 }
+
+/* 扫一扫 */
+.saoyisao{
+  margin-top: 100px;
+  margin-left: 150px;
+}
+.sys{
+  width: 100rpx;
+  height: 100rpx;
+}

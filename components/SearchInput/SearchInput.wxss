@@ -4,7 +4,7 @@
   background-color: #E3E3E3;
   border-radius: 30rpx;
 }
-.search_input navigator {
+.navigator {
   display: flex;
   justify-content: center;
   align-items: center;

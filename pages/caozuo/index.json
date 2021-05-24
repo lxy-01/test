@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "保质期",
+  "navigationBarBackgroundColor": "#ffcc01",
+  "navigationBarTextStyle": "white"
 }

@@ -1,2 +1,44 @@
-<!--pages/install/index.wxml-->
-<text>pages/install/index.wxml</text>
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">获取头像昵称</button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取头像昵称</button>
+    </block>
+    <block wx:else>
+      <view style="display:flex;">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="widthFix" class="userAvatar"></image>
+        <view class="userName">
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<!-- 布局 -->
+<view class="content">
+  <view class='setting'>
+    <image class='btnImg' src='../../icons/help.png' style="width:40rpx;height:40rpx;"></image>
+    <text class="wenzi">使用帮助</text>
+    <text class="tubiao">▶</text>
+  </view>
+  <view class='setting'>
+    <image class='btnImg' src='../../icons/fankui.png' style="width:40rpx;height:40rpx;"></image>
+    <text class="wenzi">售后反馈</text>
+    <text class="tubiao">▶</text>
+  </view>
+  <view class='setting'>
+    <image class='btnImg' src='../../icons/guanyu.png' style="width:40rpx;height:40rpx;"></image>
+    <text class="wenzi">关于我们</text>
+    <text class="tubiao">▶</text>
+  </view>
+  <view class='setting'>
+    <image class='btnImg' src='../../icons/bangding.png' style="width:40rpx;height:40rpx;"></image>
+    <text class="wenzi">绑定手机</text>
+    <text class="tubiao">▶</text>
+  </view>
+  <view class='setting'>
+    <image class='btnImg' src='../../icons/position.png' style="width:40rpx;height:40rpx;"></image>
+    <text class="wenzi">绑定地址</text>
+    <text class="tubiao">▶</text>
+  </view>
+</view>

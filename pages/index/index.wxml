@@ -59,12 +59,16 @@
     </navigator>
     <navigator url="/pages/caozuo/index" open-type="navigate" class="nav-item">
       <image src="../../icons/tips.png" class="nav-image"></image>
-      <text>操作说明</text>
+      <text>保质期对照表</text>
     </navigator>
     <navigator url="/pages/shop/index" open-type="navigate" class="nav-item">
       <image src="../../icons/shop.png" class="nav-image"></image>
-      <text>微信商城</text>
+      <text>一键购买</text>
     </navigator>
   </view>
   <!-- 导航结束 -->
+  <!-- 微信扫一扫 -->
+  <view bindtap='getScancode' class="saoyisao">
+    <image src="../../icons/saoyisao.png" class="sys" mode="widthFix"></image>
+  </view>
 </view>

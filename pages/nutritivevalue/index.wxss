@@ -1,3 +1,4 @@
+
 .nav{
     display: flex; 
     justify-content: space-around;
@@ -55,9 +56,32 @@ swiper-item{
     height: 120%;
 }
 .doneLog .title {
-    padding-top: 50rpx;
+    /* padding-top: 50rpx;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; */
+    /* font-weight: bolder; */
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+}
+.kb{
+    margin: 20rpx 20rpx;
+}
+.pinggu{
+    font-weight: bolder;
+}
+.star{
+    font-size: 14px;
+}
+.text{
+    font-size: 12px;
+}
+.advantage{
+    font-size: 14px;
+    color: rgb(91,150,108);
+}
+.disadvantage{
+    font-size: 14px;
+    color: red;
 }
   
 .doneLog .title .title-left {
@@ -65,8 +89,35 @@ swiper-item{
     color: #262626;
 }
 .doneLog .kb{
-    margin-top: 80rpx;
+    margin-top: 40rpx;
 }
+.table2{
+    border-top: 2px solid skyblue;
+    width: 90%;
+    margin-left: 25rpx;
+}
+.tr2 {
+  display: flex;
+  width: 100%;
+  border: 2px solid skyblue;
+  border-top: 0;
+  /* box-sizing: border-box; */
+}
+.td2{
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    border-right: 2px solid skyblue;
+}
+.last{
+    border-right: 0;
+}
+.tr_title{
+  display:block;
+  text-align:center;
+  padding:20rpx 0;
+}
+
 .container {
 padding: 0;
 display: flex;
@@ -74,7 +125,7 @@ flex-direction: column;
 align-items: center;
 justify-content: space-between;
 box-sizing: border-box;
-height: 130rpx;
+height: 30%;
 /* margin: 50px auto; */
 }
 ec-canvas{
@@ -83,8 +134,37 @@ ec-canvas{
 }
 .mychart{
     position: absolute; 
-    top: 400rpx;
+    top: 200rpx;
     height: 60%;
     left: 0;
     right: 0;
+}
+.table3{
+    width: 40%;
+    /* justify-content: center; */
+    margin: 50rpx 250rpx;
+    text-align: center;
+}
+/* .tr3{
+    background-color: rgb(62,122,185);
+} */
+.tra{
+    background-color: rgb(62,122,185);
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+}
+.trb{
+    background-color: rgb(102,153,255);
+    font-size: 20px;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+}
+.trc{
+    background-color:rgb(185,207,233);
+    font-size: 14px;
+    color: rgb(13,14,16);
+    height: 30px;
+    line-height: 30px;
 }
